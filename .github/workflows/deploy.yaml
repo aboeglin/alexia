@@ -64,5 +64,5 @@ jobs:
           script: |
             cd alexia/
             git pull origin main
-            ps aux | grep "src/index.js" | head -1 | tr -s ' ' | cut -d" " -f 2 | xargs kill -9
+            ps aux | grep "src/index.js" | head -1 | tr -s ' ' | cut -d" " -f 2 | xargs kill -9 || true
             npm run run
